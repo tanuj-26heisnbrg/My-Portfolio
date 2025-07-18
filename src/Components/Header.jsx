@@ -16,6 +16,16 @@ const Header = () => {
  const closeContactForm =()=> setContactFormOpen(false);
 
 
+  const navLinks = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label:"Contact Me", href:"#contact"},
+  
+
+];
+
+
   return (
 
     <header className="absolute  w-full z-50 
@@ -57,32 +67,31 @@ const Header = () => {
          </motion.div>
 
        {/* desktop navigation */}
-    <nav className="lg:flex hidden space-x-8 font-bold ">
-       {["Home", "About", "Project", "Experience", "Contact"].map((item,index) => (
-          
-          <motion.a
-            key={item}
+      
 
-            initial={{opacity:0 , y:-20}}
-            animate={{opacity:1 , y:0}}
-            transition={{
-              type:"spring",
-              stiffness:100 ,
-              damping:20,
-              delay:0.7 + index *0.2
-            }}
-            className="relative inline-block text-gray-800 dark:text-gray-200 
-            hover:text-violet-600 dark:hover:text-violet-400 font-medium
-            transition-colors duration-300 group"
-            href="#"
-           >
-              {item}
-              <span className="absolute top-6 left-0 bottom-0 w-0 h-0.5 bg-violet-600 group-hover:w-full transition-all duration-300"></span>
-            </motion.a>
+<nav className="lg:flex hidden space-x-8 font-bold ">
+  {navLinks.map((item, index) => (
+    <motion.a
+      key={item.label}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+        delay: 0.7 + index * 0.2,
+      }}
+      className="relative inline-block text-gray-800 dark:text-gray-200 
+        hover:text-violet-600 dark:hover:text-violet-400 font-medium
+        transition-colors duration-300 group"
+      href={item.href}
+    >
+      {item.label}
+      <span className="absolute top-6 left-0 bottom-0 w-0 h-0.5 bg-violet-600 group-hover:w-full transition-all duration-300"></span>
+    </motion.a>
+  ))}
+</nav>
 
-
-          ))}
-        </nav>
 
        {/*  Social icons - desktop */}
        <div className="md:flex hidden items-center space-x-5">
@@ -169,51 +178,66 @@ const Header = () => {
 </div>
        
 
-       {/* mobile Menu */}
-    <motion.div
-    initial={{opacity:0 , height:0}}
-    animate={{
-        opacity:isOpen ? 1:0,
-        height: isOpen? "auto":0,
-    }}
-    transition={{duration:0.5}}
-    className="md:hidden overflow-hidden bg-white dark:bg-gray-900 shadow-lg 
-    px-4 py-5 space-y-5">
+      
+ {/* Mobile Menu */}
+<motion.div
+  initial={{ opacity: 0, height: 0 }}
+  animate={{
+    opacity: isOpen ? 1 : 0,
+    height: isOpen ? "auto" : 0,
+  }}
+  transition={{ duration: 0.5 }}
+  className="md:hidden overflow-hidden bg-white dark:bg-gray-900 shadow-lg px-4 py-5 space-y-5"
+>
+  <nav className="flex flex-col space-y-3">
+    {navLinks.map((item) => (
+      <a
+        key={item.label}
+        href={item.href}
+        onClick={() => {
+          toggleMenu(); // closes the menu
+          // optionally scroll manually:
+          // document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
+        }}
+        className="text-gray-800 dark:text-gray-200 font-medium py-2 px-2 rounded-md hover:text-violet-500 hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-300"
+      >
+        {item.label}
+      </a>
+    ))}
+  </nav>
 
-        <nav className="flex flex-col space-y-3">
-           {["Home", "About", "Project", "Experience", "Contact"].map((item)=>
-        (
-            <a onClick={toggleMenu} className="text-gray-300 font-medium py-2" key={item} href="">
-                {item}
-            </a>
-        ))}
-        </nav>
+  <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+    <div className="flex space-x-5">
+      <a href="https://github.com/tanuj-26heisnbrg">
+        <FiGithub className="h-5 w-5 text-gray-300" />
+      </a>
+      <a href="https://x.com/drHeisenberg267">
+        <FiTwitter className="h-5 w-5 text-gray-300" />
+      </a>
+      <a href="https://www.linkedin.com/in/tanuj-kumar-yadav-061264288/">
+        <FiLinkedin className="h-5 w-5 text-gray-300" />
+      </a>
+      <a href="https://leetcode.com/u/tanujyadavtwensixzefo/">
+        <img
+          className="h-7 w-7 rounded-sm"
+          src="./LeetCode_Sharing.png"
+          alt="leetcode"
+        />
+      </a>
+    </div>
 
-        <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-           <div className="flex space-x-5">
-             <a href="#">
-                <FiGithub className="h-5 w-5 text-gray-300"/>
-             </a>
+    <button
+      onClick={() => {
+        toggleMenu(); // close menu
+        openContactForm(); // open form
+      }}
+      className="mt-4 block w-full px-4 py-2 rounded-lg bg-gradient-to-r from-violet-600 to-violet-400 font-bold text-white hover:from-violet-700 hover:to-purple-700 transition-all duration-300"
+    >
+      Contact Me !!
+    </button>
+  </div>
+</motion.div>
 
-             <a href="#">
-                <FiTwitter className="h-5 w-5 text-gray-300"/>
-             </a>
-
-             <a href="#">
-                <FiLinkedin className="h-5 w-5 text-gray-300"/>
-             </a>
-           </div>
-
-           <button 
-           onClick={openContactForm}
-           
-           className="mt-4 block w-full px-4 py-2 rounded-lg bg-gradient-to-r
-           from-violet-600 to-violet-400 font-bold">
-             Contact Me !!
-
-           </button>
-        </div>
-    </motion.div>
    
    {/* Contact Form */}
    <AnimatePresence>

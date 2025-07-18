@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Skills = () => {
   return (
     <>
-      <motion.div 
+      <motion.div id='about'   //id of about
        initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{

@@ -5,10 +5,14 @@ import Spline from '@splinetool/react-spline';
 import ScrollingWindow from './ScrollingWindow';
 
 const HeroSection = () => {
-  return (
-<section className="min-h-screen bg-gradient-to-b from-violet-900 to-black 
-  flex xl:flex-row flex-col-reverse items-center justify-between 
-  lg:px-24 md:px-12 px-6 pt-10 pb-16 relative overflow-hidden">
+  return (//id of home
+
+<section id='home'
+className="min-h-screen bg-gradient-to-b from-violet-900 to-black 
+   flex xl:flex-row flex-col
+ items-center justify-between 
+  lg:px-24 md:px-12 px-6 pt-20 md:pt-10
+ pb-16 relative overflow-hidden">
   
   {/* Left Section */}
   <div className="z-40 xl:mb-0 mb-10 text-center xl:text-left">
@@ -30,7 +34,7 @@ const HeroSection = () => {
     </motion.h1>
 
     {/* Subheading */}
-    <motion.h2
+    <motion.h2  
       initial={{ opacity: 0, y: 80 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
