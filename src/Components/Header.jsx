@@ -42,7 +42,7 @@ const Header = () => {
                 <a href="https://youtu.be/ilfYnhXD-bE?si=iAd5yQ6T_sExa-kn" target="_blank" rel="noopener noreferrer ">
                    
                    
-                    <img src="heisnbrg.jpg" alt="logo" className="rounded-xl h-10 w-10 object-cover"/>
+                    <img src="https://ih1.redbubble.net/image.1565608058.9821/st,small,507x507-pad,600x600,f8f8f8.jpg" alt="logo" className="rounded-xl h-10 w-10 object-cover"/>
 
 
                 </a>
