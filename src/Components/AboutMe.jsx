@@ -1,3 +1,4 @@
+
 const aboutMePoints = [
   " Have An ADHD urge of learning everything and being perfect in all of them.(which i know is impractical).",
   " Like to Play Sports like Cricket, Football, Badminton, Kabaddi & Rugby.",
@@ -23,4 +24,3 @@ export default function AboutMe() {
     </div>
   );
 }
-

@@ -167,7 +167,7 @@ const Skills = () => {
         >
           <h2 className="text-xl mb-4 text-purple-100 italic font-bold">Future Aspirations</h2>
           <ul className="list-disc list-inside space-y-2 font-poppins  flex-grow">
-            <li>Learn System design , Cloud and Ethical Hacking</li>
+            <li>Learn System design , Cloud and </li>
             <li>Indie Game Development with Unreal Engine</li>
             <li>To become a Great Web and Game Developer </li>
             <li>Start A Youtube Channel</li>

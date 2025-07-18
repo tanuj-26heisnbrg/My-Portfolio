@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import {motion, spring , AnimatePresence} from "framer-motion";
 import { FiGithub, FiTwitter , FiLinkedin , FiMenu ,FiX } from "react-icons/fi";
@@ -310,3 +311,4 @@ const Header = () => {
 }
 
 export default Header
+
