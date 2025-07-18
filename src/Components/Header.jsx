@@ -41,7 +41,9 @@ const Header = () => {
              flex item-center justify-center text-purple-600 italic font-bold text-xl mr-3">
                 <a href="https://youtu.be/ilfYnhXD-bE?si=iAd5yQ6T_sExa-kn" target="_blank" rel="noopener noreferrer ">
                    
-                    <img src="/My-Portfolio/heisnbrg.jpg" alt="logo" className="rounded-xl h-10 w-10 object-cover" />
+                   
+                    <img src="/My-Portfolio/heisnbrg.jpg" alt="logo" className="rounded-xl h-10 w-10 object-cover"/>
+
 
                 </a>
 
