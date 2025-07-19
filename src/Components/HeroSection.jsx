@@ -76,6 +76,7 @@ className="min-h-screen bg-gradient-to-b from-violet-900 to-black
   <ScrollingWindow />
 </div>
 
+
 </section>
 
   )

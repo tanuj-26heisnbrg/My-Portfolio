@@ -2,6 +2,7 @@ import Header from "./Components/Header"
 import HeroSection from "./Components/HeroSection"
 import React from "react"
 import Skills from "./Components/Skills"
+import Projects from "./Components/Projects"
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
       <Header/>
       <HeroSection/>
       <Skills/>
+      <Projects/>
     </>
   )
 }
