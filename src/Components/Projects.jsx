@@ -6,13 +6,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-
-
+import './swiperCustom.css'; // <-- Step 1: add custom CSS file import
 
 const Projects = () => {
   return (
     <>
-      <motion.div id='projects'
+      <motion.div
+        id='projects'
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -27,7 +27,7 @@ const Projects = () => {
         Projects
       </motion.div>
 
-      <div className="w-4/5 max-w-7xl mx-auto mt-10 px-4">
+      <div className="w-4/5 max-w-7xl mx-auto mt-10 px-4 relative">
         <Swiper
           modules={[Navigation]}
           navigation
@@ -41,7 +41,7 @@ const Projects = () => {
           loop={true}
           className="!pb-10"
         >
-          <SwiperSlide >
+          <SwiperSlide>
             <Card
               bgColor="bg-violet-950"
               heading="This Portfolio!"
@@ -57,7 +57,7 @@ const Projects = () => {
               bgColor="bg-violet-950"
               heading="Saarthi: Travel App"
               imageSrc="./website.png"
-              description="A smart assistant travle web-app that helps you plan your travels with ease , also has an AI Chatbot as Companion!"
+              description="A smart assistant travel web-app that helps you plan your travels with ease, also has an AI Chatbot as Companion!"
               buttonText="GitHub Link"
               buttonLink="https://github.com/tanuj-26heisnbrg/travel_site-main"
             />
@@ -74,18 +74,16 @@ const Projects = () => {
             />
           </SwiperSlide>
 
-           <SwiperSlide>
+          <SwiperSlide>
             <Card
               bgColor="bg-violet-950"
-              heading="Exam Seating Arrangment System"
+              heading="Exam Seating Arrangement System"
               imageSrc="./examseating.png"
               description="A JAVA GUI app to generate seating arrangement plans as per one's need."
-              
               buttonText="GitHub Link "
               buttonLink="https://github.com/tanuj-26heisnbrg/Exam-Seating-Arrangement-System"
             />
           </SwiperSlide>
-
         </Swiper>
       </div>
     </>
@@ -93,4 +91,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

@@ -1,0 +1,22 @@
+/* swiperCustom.css */
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+  background-color: rgba(88, 28, 135, 0.8); /* violet bg */
+  padding: 0.8rem;
+  border-radius: 9999px; /* fully rounded */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  transform: scale(1.1);
+  background-color: rgba(139, 92, 246, 0.9); /* lighter violet on hover */
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
