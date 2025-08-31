@@ -64,7 +64,7 @@ className="min-h-screen bg-gradient-to-b from-violet-900 to-black
       }}
       className="text-sm sm:text-base md:text-lg font-poppins text-purple-200 max-w-3xl mx-auto xl:mx-0 leading-relaxed"
     >
-      Exploring the worlds of Web Development, Game Development, and Data Structures & Algorithms — with equal passion for all three. From building smooth,
+      Exploring the worlds of Web Development, Game Development, AIML and Data Structures & Algorithms — with equal passion for all Four. From building smooth,
       responsive interfaces to designing interactive game mechanics and solving complex logical problems, every project is a new opportunity to mix creativity with code. Whether it's crafting user-first designs or optimizing algorithmic solutions, the goal remains the same: to build, learn, and grow through code.
     </motion.h3>
    

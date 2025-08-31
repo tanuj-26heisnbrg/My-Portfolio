@@ -3,6 +3,7 @@ import HeroSection from "./Components/HeroSection"
 import React from "react"
 import Skills from "./Components/Skills"
 import Projects from "./Components/Projects"
+import Certifications from "./Components/Certifications"
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
       <HeroSection/>
       <Skills/>
       <Projects/>
+      <Certifications/>
     </>
   )
 }
