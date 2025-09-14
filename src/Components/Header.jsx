@@ -159,7 +159,7 @@ function sendEmail(e) {
            animate={{opacity:1 , scale:1}}
            transition={{delay:1.3, duration:0.8}}
           className=" text-gray-700 dark:text-gray-300 hover:text-violet-600
-          dark:hover:text-violet-400 transition-colors duration-300" href="https://www.linkedin.com/in/tanuj-kumar-yadav-061264288/">
+          dark:hover:text-violet-400 transition-colors duration-300" href="https://www.linkedin.com/in/tanuj-kumar-yadav-9053a637a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
 
             <FiLinkedin className="w-5 h-5"/>
 
@@ -214,19 +214,31 @@ function sendEmail(e) {
   className="md:hidden overflow-hidden bg-white dark:bg-gray-900 shadow-lg px-4 py-5 space-y-5"
 >
   <nav className="flex flex-col space-y-3">
+
     {navLinks.map((item) => (
-      <a
-        key={item.label}
-        href={item.href}
-        onClick={() => {
-          toggleMenu(); // closes the menu
-          // optionally scroll manually:
-          // document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
-        }}
-        className="text-gray-800 dark:text-gray-200 font-medium py-2 px-2 rounded-md hover:text-violet-500 hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-300"
-      >
-        {item.label}
-      </a>
+
+ <a
+  key={item.label}
+  href={item.href}
+  onClick={(e) => {
+    e.preventDefault(); // default anchor jump roka
+    toggleMenu(); // menu band kar diya
+
+    // thoda wait karo menu band hone ke baad scroll karne ke liye
+    setTimeout(() => {
+      const target = document.querySelector(item.href);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 300); // 0.3s wait, match with your menu animation
+  }}
+  className="text-gray-800 dark:text-gray-200 font-medium py-2 px-2 rounded-md hover:text-violet-500 hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-300"
+>
+  {item.label}
+</a>
+
+
+
     ))}
   </nav>
 
@@ -238,7 +250,7 @@ function sendEmail(e) {
       <a href="https://x.com/drHeisenberg267">
         <FiTwitter className="h-5 w-5 text-gray-300" />
       </a>
-      <a href="https://www.linkedin.com/in/tanuj-kumar-yadav-061264288/">
+      <a href="https://www.linkedin.com/in/tanuj-kumar-yadav-9053a637a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
         <FiLinkedin className="h-5 w-5 text-gray-300" />
       </a>
       <a href="https://leetcode.com/u/tanujyadavtwensixzefo/">
